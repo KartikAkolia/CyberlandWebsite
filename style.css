@@ -38,12 +38,13 @@ body {
 
 /* 
   ---------------------------------------------------------
-  NAVBAR
+  NAVBAR STYLING & ENHANCEMENTS
   ---------------------------------------------------------
 */
 .navbar {
   background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Added shadow under navbar */
+  padding: 10px 0;
 }
 
 .navbar-brand, 
@@ -54,28 +55,13 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: var(--color-dark) !important;
+  color: #ffcc00;  /* Highlight text on hover */
+  transition: 0.3s;
 }
 
-/* 
-  ---------------------------------------------------------
-  LOGO AND PARK MAP
-  ---------------------------------------------------------
-*/
-.top-logo {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  max-height: 50px;
-}
-
-.park-map {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  max-width: 200px;
-  opacity: 0.9;
-  z-index: 999;
+/* Make the logo clickable */
+.logo, .top-logo {
+  cursor: pointer;
 }
 
 /* 
@@ -148,71 +134,140 @@ h3 {
 
 /* 
   ---------------------------------------------------------
-  BUTTONS
+  CALL-TO-ACTION (CTA) & GENERAL BUTTONS
   ---------------------------------------------------------
 */
-.btn-primary {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 5px;
+button, .btn {
+  background: #ff6600;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.btn-primary:hover {
-  background-color: var(--color-brown);
-  border-color: var(--color-brown);
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #ff4500;
 }
 
 /* 
   ---------------------------------------------------------
-  LINKS
+  FORM DESIGN
   ---------------------------------------------------------
 */
-a {
-  color: var(--color-accent);
-  text-decoration: none;
+input, textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 5px;
 }
 
-a:hover {
-  color: var(--color-brown);
-  text-decoration: underline;
+/* Enhance Send Message Button */
+#send-message {
+  background: #ff4500;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#send-message:hover {
+  background: #cc3700;
 }
 
 /* 
   ---------------------------------------------------------
-  FOOTER
+  FOOTER ENHANCEMENTS
   ---------------------------------------------------------
 */
 footer {
-  background-color: var(--color-primary);
-  color: var(--color-light);
-  padding: 20px 0;
+  background: linear-gradient(to right, #ff6600, #ff9900);
+  color: white;
   text-align: center;
+  padding: 20px;
 }
 
 footer a {
-  color: var(--color-light);
+  color: white;
   margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
 }
 
 /* 
   ---------------------------------------------------------
-  RESPONSIVE MEDIA QUERIES
+  FIXED ELEMENTS: LOGO & PARK MAP
+  ---------------------------------------------------------
+*/
+.top-logo, .logo {
+  cursor: pointer;
+}
+
+.park-map {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  max-width: 200px;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+/* 
+  ---------------------------------------------------------
+  MOBILE-FRIENDLY TABLE STYLING
   ---------------------------------------------------------
 */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  h3 { font-size: 1.5rem; }
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* 
+  ---------------------------------------------------------
+  HAMBURGER MENU FOR MOBILE NAVIGATION
+  ---------------------------------------------------------
+*/
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+  }
   
-  .navbar-nav {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #ff6600;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
     text-align: center;
   }
   
-  /* Ensure tables are scrollable on mobile */
-  .table-responsive {
-    overflow-x: auto;
+  nav ul.active {
+    display: flex;
   }
 }
