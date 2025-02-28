@@ -1,66 +1,63 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 /* 
   ---------------------------------------------------------
   COLOR VARIABLES
   ---------------------------------------------------------
-  Adjust these values to refine your color scheme.
 */
 :root {
   /* Primary Brand Colors */
   --color-primary: #ff9900; /* Vibrant orange */
-  --color-secondary: #e55b00; /* Deeper orange/red hue for contrast */
-  --color-accent: #ff3e00; /* A bright red-orange accent */
-  --color-yellow: #ffc107; /* Additional yellow accent */
-  --color-brown: #8b4513;  /* Warm brown for headings or borders */
-
-  /* Text and Background Neutrals */
+  --color-secondary: #e55b00; /* Deeper orange/red hue */
+  --color-accent: #ff3e00; /* Bright red-orange accent */
+  --color-yellow: #ffc107; /* Yellow accent */
+  --color-brown: #8b4513;  /* Warm brown */
+  /* Neutrals */
   --color-dark: #2b2b2b;
   --color-light: #ffffff;
   --color-offwhite: #f5f5f5;
-
-  /* Background Variations */
-  --fun-bg: #fff3e0;       /* Light warm tone for 'fun' sections */
-  --corporate-bg: #f5f5f5; /* More subdued background for 'corporate' pages */
+  /* Section Backgrounds */
+  --fun-bg: #fff3e0;
+  --corporate-bg: #f5f5f5;
 }
 
-/*
+/* 
   ---------------------------------------------------------
   GLOBAL ELEMENT STYLES
   ---------------------------------------------------------
-  (e.g. body, headings, paragraphs)
 */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: var(--color-dark);
-  background-color: var(--color-light);
+  background: var(--color-light);
+  line-height: 1.6;
 }
 
-/*
+/* 
   ---------------------------------------------------------
   NAVBAR
   ---------------------------------------------------------
 */
 .navbar {
-  /* Use a gradient or a solid color for the navbar background */
-  background: linear-gradient(
-    90deg, 
-    var(--color-primary) 0%, 
-    var(--color-secondary) 100%
-  );
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar-brand, 
 .navbar-nav .nav-link {
   color: var(--color-light) !important;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .navbar-nav .nav-link:hover {
   color: var(--color-dark) !important;
 }
 
-/*
+/* 
   ---------------------------------------------------------
   LOGO AND PARK MAP
   ---------------------------------------------------------
@@ -78,38 +75,61 @@ body {
   right: 10px;
   max-width: 200px;
   opacity: 0.9;
-  z-index: 999; /* Ensures the map stays on top */
+  z-index: 999;
 }
 
-/*
+/* 
   ---------------------------------------------------------
-  HEADINGS AND SECTIONS
+  HEADINGS & TYPOGRAPHY
   ---------------------------------------------------------
 */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--color-secondary);
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+  color: var(--color-brown);
+}
+
 .section-heading {
   margin-top: 40px;
   margin-bottom: 20px;
-  color: var(--color-secondary);
   font-weight: 700;
 }
 
-/* "Fun" Pages (e.g., About Us) */
-.fun-page {
-  background-color: var(--fun-bg);
+/* 
+  ---------------------------------------------------------
+  SECTIONS & CONTAINERS
+  ---------------------------------------------------------
+*/
+.fun-page, .corporate-page {
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.fun-page {
+  background-color: var(--fun-bg);
   border-left: 5px solid var(--color-primary);
 }
 
-/* "Corporate" Pages (e.g., Apprenticeships, Vacancies, Training) */
 .corporate-page {
   background-color: var(--corporate-bg);
-  padding: 20px;
-  border-radius: 8px;
   border-left: 5px solid var(--color-secondary);
 }
 
-/*
+/* 
   ---------------------------------------------------------
   TABLES
   ---------------------------------------------------------
@@ -123,10 +143,10 @@ body {
 }
 
 .table tbody tr:hover {
-  background-color: #ffe8cc; /* Light highlight on hover */
+  background-color: #ffe8cc;
 }
 
-/*
+/* 
   ---------------------------------------------------------
   BUTTONS
   ---------------------------------------------------------
@@ -135,6 +155,9 @@ body {
   background-color: var(--color-accent);
   border-color: var(--color-accent);
   font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
 }
 
 .btn-primary:hover {
@@ -142,7 +165,7 @@ body {
   border-color: var(--color-brown);
 }
 
-/*
+/* 
   ---------------------------------------------------------
   LINKS
   ---------------------------------------------------------
@@ -155,4 +178,41 @@ a {
 a:hover {
   color: var(--color-brown);
   text-decoration: underline;
+}
+
+/* 
+  ---------------------------------------------------------
+  FOOTER
+  ---------------------------------------------------------
+*/
+footer {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  color: var(--color-light);
+  margin: 0 10px;
+}
+
+/* 
+  ---------------------------------------------------------
+  RESPONSIVE MEDIA QUERIES
+  ---------------------------------------------------------
+*/
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  /* Ensure tables are scrollable on mobile */
+  .table-responsive {
+    overflow-x: auto;
+  }
 }
