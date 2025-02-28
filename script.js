@@ -13,21 +13,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
   lazyImages.forEach((img) => {
     imageObserver.observe(img);
   });
 
-  // Lightweight Image Slider
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
-  window.nextSlide = function () {
-    if (slides.length > 0) {
-      slides[currentSlide].classList.remove("active");
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add("active");
-    }
-  };
+  // Lightweight Image Slider (using display property)
+  const slides = document.querySelectorAll(".slider img");
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? "block" : "none";
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  // Show the first slide initially
+  showSlide(currentIndex);
+
+  // Attach event listener to the next button
+  const nextButton = document.querySelector("button");
+  if (nextButton) {
+    nextButton.addEventListener("click", nextSlide);
+  }
 
   // Job Application Form Validation
   const jobForm = document.getElementById("jobForm");

@@ -271,3 +271,42 @@ footer a {
     display: flex;
   }
 }
+
+/* 
+  ---------------------------------------------------------
+  UPDATED IMAGE SLIDER STYLING
+  ---------------------------------------------------------
+*/
+.slider {
+  display: flex;
+  justify-content: center; /* Centers images */
+  align-items: center;
+  max-width: 100%; /* Prevents overflow */
+  overflow: hidden;
+  position: relative;
+  height: 300px; /* Adjust based on your design */
+}
+
+.slider img {
+  width: auto; /* Auto width to maintain aspect ratio */
+  max-width: 80%; /* Prevents images from being too large */
+  max-height: 100%; /* Limits image height */
+  object-fit: cover; /* Ensures images scale nicely */
+  border-radius: 10px; /* Soft rounded edges */
+}
+
+/* Slider Button (specific override for slider button styling) */
+.slider button {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
