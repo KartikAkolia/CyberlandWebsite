@@ -1,17 +1,70 @@
-/* Navbar Colours */
-.navbar {
-  background-color: #ff9900; /* Vibrant orange */
+/* 
+  ---------------------------------------------------------
+  COLOR VARIABLES
+  ---------------------------------------------------------
+  Adjust these values to refine your color scheme.
+*/
+:root {
+  /* Primary Brand Colors */
+  --color-primary: #ff9900; /* Vibrant orange */
+  --color-secondary: #e55b00; /* Deeper orange/red hue for contrast */
+  --color-accent: #ff3e00; /* A bright red-orange accent */
+  --color-yellow: #ffc107; /* Additional yellow accent */
+  --color-brown: #8b4513;  /* Warm brown for headings or borders */
+
+  /* Text and Background Neutrals */
+  --color-dark: #2b2b2b;
+  --color-light: #ffffff;
+  --color-offwhite: #f5f5f5;
+
+  /* Background Variations */
+  --fun-bg: #fff3e0;       /* Light warm tone for 'fun' sections */
+  --corporate-bg: #f5f5f5; /* More subdued background for 'corporate' pages */
 }
 
+/*
+  ---------------------------------------------------------
+  GLOBAL ELEMENT STYLES
+  ---------------------------------------------------------
+  (e.g. body, headings, paragraphs)
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+}
+
+/*
+  ---------------------------------------------------------
+  NAVBAR
+  ---------------------------------------------------------
+*/
+.navbar {
+  /* Use a gradient or a solid color for the navbar background */
+  background: linear-gradient(
+    90deg, 
+    var(--color-primary) 0%, 
+    var(--color-secondary) 100%
+  );
+}
+
+.navbar-brand, 
 .navbar-nav .nav-link {
-  color: #fff;
+  color: var(--color-light) !important;
+  font-weight: 600;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #000;
+  color: var(--color-dark) !important;
 }
 
-/* Positioning for Top-Right Logo and Bottom-Right Park Map */
+/*
+  ---------------------------------------------------------
+  LOGO AND PARK MAP
+  ---------------------------------------------------------
+*/
 .top-logo {
   position: absolute;
   top: 10px;
@@ -25,24 +78,81 @@
   right: 10px;
   max-width: 200px;
   opacity: 0.9;
+  z-index: 999; /* Ensures the map stays on top */
 }
 
-/* Section Heading */
+/*
+  ---------------------------------------------------------
+  HEADINGS AND SECTIONS
+  ---------------------------------------------------------
+*/
 .section-heading {
   margin-top: 40px;
   margin-bottom: 20px;
+  color: var(--color-secondary);
+  font-weight: 700;
 }
 
-/* Fun Page Styling (e.g. About Us) */
+/* "Fun" Pages (e.g., About Us) */
 .fun-page {
-  background-color: #fff3e0; /* Light warm tone */
+  background-color: var(--fun-bg);
   padding: 20px;
   border-radius: 8px;
+  border-left: 5px solid var(--color-primary);
 }
 
-/* Corporate Page Styling (e.g. Apprenticeships, Vacancies, Training) */
+/* "Corporate" Pages (e.g., Apprenticeships, Vacancies, Training) */
 .corporate-page {
-  background-color: #f5f5f5; /* Subdued look */
+  background-color: var(--corporate-bg);
   padding: 20px;
   border-radius: 8px;
+  border-left: 5px solid var(--color-secondary);
+}
+
+/*
+  ---------------------------------------------------------
+  TABLES
+  ---------------------------------------------------------
+*/
+.table-bordered > :not(caption) > * > * {
+  border-color: var(--color-dark) !important;
+}
+
+.table thead.table-light {
+  background-color: var(--color-offwhite);
+}
+
+.table tbody tr:hover {
+  background-color: #ffe8cc; /* Light highlight on hover */
+}
+
+/*
+  ---------------------------------------------------------
+  BUTTONS
+  ---------------------------------------------------------
+*/
+.btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brown);
+  border-color: var(--color-brown);
+}
+
+/*
+  ---------------------------------------------------------
+  LINKS
+  ---------------------------------------------------------
+*/
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-brown);
+  text-decoration: underline;
 }
