@@ -1,24 +1,20 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
-/* 
-  ---------------------------------------------------------
-  HTML & BODY FOR STICKY FOOTER
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   HTML & BODY FOR STICKY FOOTER
+--------------------------------------------------------- */
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* 
-  ---------------------------------------------------------
-  GLOBAL ELEMENT STYLES
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   GLOBAL ELEMENT STYLES
+--------------------------------------------------------- */
 body {
-  display: flex; /* Enables sticky footer with flexbox */
+  display: flex;
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   color: var(--color-dark);
@@ -26,32 +22,25 @@ body {
   line-height: 1.6;
 }
 
-/* 
-  ---------------------------------------------------------
-  COLOR VARIABLES
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   COLOR VARIABLES
+--------------------------------------------------------- */
 :root {
-  /* Primary Brand Colors */
-  --color-primary: #ff9900; /* Vibrant orange */
-  --color-secondary: #e55b00; /* Deeper orange/red hue */
-  --color-accent: #ff3e00; /* Bright red-orange accent */
-  --color-yellow: #ffc107; /* Yellow accent */
-  --color-brown: #8b4513;  /* Warm brown */
-  /* Neutrals */
+  --color-primary: #ff9900;
+  --color-secondary: #e55b00;
+  --color-accent: #ff3e00;
+  --color-yellow: #ffc107;
+  --color-brown: #8b4513;
   --color-dark: #2b2b2b;
   --color-light: #ffffff;
   --color-offwhite: #f5f5f5;
-  /* Section Backgrounds */
   --fun-bg: #fff3e0;
   --corporate-bg: #f5f5f5;
 }
 
-/* 
-  ---------------------------------------------------------
-  NAVBAR STYLING & ENHANCEMENTS
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   NAVBAR STYLING & ENHANCEMENTS
+--------------------------------------------------------- */
 .navbar {
   background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
@@ -71,51 +60,13 @@ body {
 }
 
 /* Make the logo clickable */
-.logo, .top-logo {
+.top-logo {
   cursor: pointer;
 }
 
-/* 
-  ---------------------------------------------------------
-  HAMBURGER MENU FOR MOBILE NAVIGATION
-  ---------------------------------------------------------
-*/
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 24px;
-    color: var(--color-light);
-  }
-  
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #ff6600;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .nav-menu.active {
-    display: flex;
-  }
-}
-
-/* 
-  ---------------------------------------------------------
-  HEADINGS & TYPOGRAPHY
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   HEADINGS & TYPOGRAPHY
+--------------------------------------------------------- */
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -140,11 +91,9 @@ h3 {
   font-weight: 700;
 }
 
-/* 
-  ---------------------------------------------------------
-  SECTIONS & CONTAINERS
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   SECTIONS & CONTAINERS
+--------------------------------------------------------- */
 .fun-page, .corporate-page {
   padding: 20px;
   border-radius: 8px;
@@ -162,11 +111,9 @@ h3 {
   border-left: 5px solid var(--color-secondary);
 }
 
-/* 
-  ---------------------------------------------------------
-  TABLES
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   TABLES
+--------------------------------------------------------- */
 .table-bordered > :not(caption) > * > * {
   border-color: var(--color-dark) !important;
 }
@@ -179,11 +126,9 @@ h3 {
   background-color: #ffe8cc;
 }
 
-/* 
-  ---------------------------------------------------------
-  CALL-TO-ACTION (CTA) & GENERAL BUTTONS
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   CALL-TO-ACTION (CTA) & GENERAL BUTTONS
+--------------------------------------------------------- */
 button, .btn {
   background: #ff6600;
   color: white;
@@ -201,11 +146,9 @@ button:hover, .btn:hover {
   background: #ff4500;
 }
 
-/* 
-  ---------------------------------------------------------
-  FORM DESIGN
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   FORM DESIGN
+--------------------------------------------------------- */
 input, textarea {
   border: 1px solid #ccc;
   padding: 10px;
@@ -228,18 +171,16 @@ input, textarea {
   background: #cc3700;
 }
 
-/* 
-  ---------------------------------------------------------
-  FOOTER ENHANCEMENTS & STICKY FOOTER
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   FOOTER ENHANCEMENTS & STICKY FOOTER
+--------------------------------------------------------- */
 /* main takes the remaining vertical space */
 main {
   flex: 1 0 auto;
 }
 
 footer {
-  flex-shrink: 0; /* ensures footer is pinned at bottom */
+  flex-shrink: 0;
   background: linear-gradient(to right, #ff6600, #ff9900);
   color: white;
   text-align: center;
@@ -266,15 +207,9 @@ footer a {
   font-size: 20px;
 }
 
-/* 
-  ---------------------------------------------------------
-  FIXED ELEMENTS: LOGO & PARK MAP
-  ---------------------------------------------------------
-*/
-.top-logo, .logo {
-  cursor: pointer;
-}
-
+/* ---------------------------------------------------------
+   FIXED ELEMENTS: LOGO & PARK MAP
+--------------------------------------------------------- */
 .park-map {
   position: fixed;
   bottom: 10px;
@@ -284,106 +219,13 @@ footer a {
   z-index: 999;
 }
 
-/* 
-  ---------------------------------------------------------
-  MOBILE-FRIENDLY TABLE STYLING
-  ---------------------------------------------------------
-*/
+/* ---------------------------------------------------------
+   MOBILE-FRIENDLY TABLE STYLING
+--------------------------------------------------------- */
 @media (max-width: 768px) {
   table {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
   }
-}
-
-/* 
-  ---------------------------------------------------------
-  UPDATED IMAGE SLIDER STYLING
-  ---------------------------------------------------------
-*/
-/* Default styles (for desktops) */
-.slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-  height: 500px; /* Larger height for desktop */
-}
-
-/* Use display: none / display: block approach */
-.slider img {
-  display: none;           /* Hide all slides by default */
-  width: auto;
-  max-width: 80%;
-  max-height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-  position: static;        /* Remove absolute positioning */
-}
-
-/* Only the active slide is displayed */
-.slider img.active {
-  display: block;
-}
-
-/* Slider button inside .slider */
-.slider button {
-  position: absolute;
-  bottom: 20px;
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
-}
-
-.slider button:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-/* Responsive Fix for Mobile (Smaller Screens) */
-@media (max-width: 768px) {
-  .slider {
-    height: 300px; /* Adjust height for smaller screens */
-  }
-  
-  .slider img {
-    max-width: 100%; /* Ensure full width on mobile */
-  }
-
-  .slider button {
-    bottom: 10px;
-    padding: 8px;
-  }
-}
-
-/* 
-  ---------------------------------------------------------
-  NEXT BUTTON (OPTIONAL) - If you want a separate bottom-right button
-  ---------------------------------------------------------
-*/
-.next-button {
-  position: fixed;
-  bottom: 60px; /* space above footer */
-  right: 20px;
-  background: var(--color-accent);
-  color: var(--color-light);
-  border: none;
-  border-radius: 6px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.next-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
-  background: #ff4500;
 }
