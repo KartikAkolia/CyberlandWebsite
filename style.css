@@ -45,28 +45,49 @@ nav ul li a {
     font-weight: bold;
 }
 
+/* Main Content */
 main {
     padding: 20px;
     text-align: center;
+    position: relative; /* Ensures images position correctly */
+    min-height: 80vh; /* Prevents footer from overlapping */
 }
 
-section {
+/* About Section */
+.about-section {
     background: #ffe0b2;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    margin: 20px auto;
-    max-width: 800px;
+    margin: auto;
+    max-width: 60%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
+/* Image Placement */
+.corner-image {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    z-index: 1; /* Places images behind the section */
+}
+
+/* Position images in whitespace */
+.top-left { top: 10px; left: 5%; } 
+.top-right { top: 10px; right: 5%; }
+.bottom-left { bottom: 10px; left: 5%; }
+.bottom-right { bottom: 10px; right: 5%; }
+
+/* Footer Fix */
 footer {
     background-color: #795548;
     color: white;
     text-align: center;
     padding: 10px;
-    position: absolute;
-    bottom: 0;
+    position: relative; /* Fixes overlap issue */
     width: 100%;
+    margin-top: 50px; /* Ensures spacing between content and footer */
 }
 
 /* Mobile Styles */
@@ -92,5 +113,15 @@ footer {
 
     .nav-links li {
         padding: 10px 0;
+    }
+
+    /* Adjust image placement for smaller screens */
+    .corner-image {
+        width: 100px; /* Reduce image size */
+    }
+    .top-left, .top-right, .bottom-left, .bottom-right {
+        position: static; /* Stacks images instead */
+        display: block;
+        margin: 10px auto;
     }
 }
