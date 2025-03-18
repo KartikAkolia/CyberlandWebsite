@@ -1,15 +1,15 @@
-/* Cyberland Theme Styles */
+/* Cyberland Uniform Theme Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff3e0;
+    background-color: #fff3e0; /* light cream background */
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: #ff9800;
+    background-color: #ff9800; /* vibrant orange header */
     color: white;
     padding: 15px;
     text-align: center;
@@ -32,9 +32,10 @@ header {
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
-    background-color: #ff6f00;
+    background-color: #ff6f00; /* darker orange navigation */
 }
 
 nav ul li {
@@ -49,49 +50,79 @@ nav ul li a {
 
 /* Main Content */
 main {
-    padding: 95px 20px 20px; /* Increased top padding */
+    padding: 95px 20px 20px;
     text-align: center;
-    position: relative; /* Ensures images position correctly */
-    min-height: 80vh; /* Prevents footer from overlapping */
+    position: relative;
+    min-height: 80vh;
 }
 
-/* About Section */
-.about-section {
+/* Content Sections (About, Vacancies, Training, Apply) */
+.about-section,
+.vacancy-section,
+.training-section,
+.apply-section {
     background: #ffe0b2;
     padding: 30px;
     border-radius: 10px;
-    margin: 80px auto 20px auto; /* Increased top margin */
+    margin: 80px auto 20px auto;
     max-width: 60%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 2;
+}
+
+/* Footer */
+footer {
+    background-color: #795548; /* warm brown footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Uniform Button Styling */
+.btn-primary {
+    background-color: #ff6f00;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e65100;
+}
+
+/* Uniform Table Styling */
+.table {
+    background-color: #fff;
+    color: #333;
+}
+
+.table th {
+    background-color: #ff9800;
+    color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffe0b2;
+}
+
+/* Form Controls */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 /* Image Placement */
 .corner-image {
-    width: 15vw; /* 15% of the viewport width */
-    max-width: 300px; /* Prevents images from getting too large */
+    width: 15vw;
+    max-width: 300px;
     height: auto;
     position: absolute;
-    z-index: 1; /* Places images behind the section */
+    z-index: 1;
 }
 
-/* Position images in whitespace */
 .top-left { top: 10px; left: 5%; } 
 .top-right { top: 10px; right: 5%; }
 .bottom-left { bottom: 10px; left: 5%; }
 .bottom-right { bottom: 10px; right: 5%; }
-
-/* Footer Fix */
-footer {
-    background-color: #795548;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative; /* Fixes overlap issue */
-    width: 100%;
-    margin-top: 50px; /* Ensures spacing between content and footer */
-}
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
@@ -118,12 +149,11 @@ footer {
         padding: 10px 0;
     }
 
-    /* Adjust image placement for smaller screens */
     .corner-image {
-        width: 100px; /* Reduce image size */
+        width: 100px;
     }
     .top-left, .top-right, .bottom-left, .bottom-right {
-        position: static; /* Stacks images instead */
+        position: static;
         display: block;
         margin: 10px auto;
     }

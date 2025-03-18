@@ -1,71 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="About Cyberland - A family-owned theme park in the South East of England.">
-  <meta name="keywords" content="Theme park, Cyberland, Family Day out, Fun, Entertainment">
-  <meta name="author" content="Cyberland IT Team">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="About Cyberland - A family-owned theme park in the South East of England."
+  />
+  <meta name="keywords" content="Theme park, Cyberland, Family Day out, Fun, Entertainment" />
+  <meta name="author" content="Cyberland IT Team" />
   <title>About Us - Cyberland</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS (Uniform Theme) -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header>
+    <h1>Cyberland Theme Park</h1>
+    <button class="menu-toggle">☰</button>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="apprenticeships.html">Apprenticeships</a></li>
+        <li><a href="vacancies.html">Vacancies</a></li>
+        <li><a href="training.html">Training Courses</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <h1>Cyberland Theme Park</h1>
-  <button class="menu-toggle">☰</button>
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="apprenticeships.html">Apprenticeships</a></li>
-      <li><a href="vacancies.html">Vacancies</a></li>
-      <li><a href="training.html">Training Courses</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Container for content -->
+  <main class="container my-4">
+    <div class="row">
+      <!-- LEFT COLUMN: Text -->
+      <div class="col-md-6 text-start">
+        <h2>About Us</h2>
+        <p>
+          Cyberland is a family-owned and managed Theme Park located in the South East
+          of England. Over the years, we have grown from a small park with only 12
+          employees to a nationally recognized destination, attracting over 230,000
+          visitors annually!
+        </p>
+        <p>
+          We have built a reputation for delivering quality entertainment in a safe
+          environment for all ages. We sincerely believe in our motto:
+          <strong>“Where the fun never stops!”</strong>
+        </p>
+      </div>
 
-<main class="container">
-  <!-- About Section -->
-  <section class="about-section">
-    <div class="about-content">
-      <h2>About Us</h2>
-      <p>Cyberland is a family-owned and managed Theme Park located in the South East of England. Over the years, we have grown from a small park with only 12 employees to a nationally recognized destination, attracting over 230,000 visitors annually!</p>
-      <p>We have built a reputation for delivering quality entertainment in a safe environment for all ages. We sincerely believe in our motto: <strong>“Where the fun never stops!”</strong></p>
+      <!-- RIGHT COLUMN: 2×2 Image Grid -->
+      <div class="col-md-6">
+        <div class="row">
+          <!-- Image 1 -->
+          <div class="col-6 mb-3">
+            <img
+              src="https://media.istockphoto.com/id/139717376/photo/peril-upside-down-on-a-rollercoaster.jpg?s=612x612&w=0&k=20&c=oRmP8yNA2P5I25f6_6CNlwlse90QSbiRakCB2odajpI="
+              alt="Roller coaster"
+              class="img-fluid"
+            />
+          </div>
+          <!-- Image 2 -->
+          <div class="col-6 mb-3">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/8d/32/ba/water-park.jpg?w=900&h=500&s=1"
+              alt="Water park"
+              class="img-fluid"
+            />
+          </div>
+          <!-- Image 3 -->
+          <div class="col-6 mb-3">
+            <img
+              src="https://thdaily.s3.us-west-1.amazonaws.com/final_size-Themepark_20240616233719.png"
+              alt="Theme park area"
+              class="img-fluid"
+            />
+          </div>
+          <!-- Image 4 -->
+          <div class="col-6 mb-3">
+            <img
+              src="https://media1.thrillophilia.com/filestore/wbs8w3f5suvdfcvx7hbg1kcrgnsj_1622546003_shutterstock_649854703.png?w=400&dpr=2"
+              alt="Ferris wheel"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- Images in Empty Space (Positioned Absolutely) -->
-  <img 
-    src="https://media.istockphoto.com/id/139717376/photo/peril-upside-down-on-a-rollercoaster.jpg?s=612x612&w=0&k=20&c=oRmP8yNA2P5I25f6_6CNlwlse90QSbiRakCB2odajpI=" 
-    class="corner-image top-left" 
-    alt="Roller coaster looping upside down">
+  <footer>
+    <p>&copy; 2025 Cyberland. All Rights Reserved.</p>
+  </footer>
 
-  <img 
-    src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/8d/32/ba/water-park.jpg?w=900&h=500&s=1" 
-    class="corner-image top-right" 
-    alt="People enjoying a water park">
-
-  <img 
-    src="https://thdaily.s3.us-west-1.amazonaws.com/final_size-Themepark_20240616233719.png" 
-    class="corner-image bottom-left" 
-    alt="Colorful theme park area">
-
-  <img 
-    src="https://media1.thrillophilia.com/filestore/wbs8w3f5suvdfcvx7hbg1kcrgnsj_1622546003_shutterstock_649854703.png?w=400&dpr=2" 
-    class="corner-image bottom-right" 
-    alt="Ferris wheel at an amusement park">
-</main>
-
-<footer>
-  <p>&copy; 2025 Cyberland. All Rights Reserved.</p>
-</footer>
-
-<!-- Bootstrap JS (optional) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+  <!-- Bootstrap JS (optional, for certain components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Mobile menu script -->
+  <script src="script.js"></script>
 </body>
 </html>
