@@ -161,12 +161,10 @@ footer {
 
 /* Override for training page */
 .training-page {
-    /* Less top padding for a tighter layout */
     padding-top: 20px !important;
 }
 
-/* Text color override for training page headings & labels */
-.training-page h2,
-.training-page label {
-    color: #4E342E; /* Black or choose another 'corporate' color */
+/* Override for vacancies page to reduce top padding */
+.vacancies-page {
+    padding-top: 20px !important;
 }
