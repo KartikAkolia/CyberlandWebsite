@@ -27,11 +27,16 @@
     </nav>
   </header>
 
-  <main class="container my-2">
-    <div class="row">
+  <!-- 
+    Added "apprenticeships-page" class to <main> 
+    and changed my-3 to reduce default Bootstrap margin.
+  -->
+  <main class="container my-3 apprenticeships-page">
+    <!-- Centered main heading -->
+    <h2 class="text-center">Apprenticeships</h2>
+    <div class="row mt-4">
       <!-- LEFT COLUMN: Text & Table -->
       <div class="col-md-6 text-start">
-        <h2>Apprenticeships</h2>
         <h3>Apprentice Web Developers</h3>
         <p>
           We have a great opportunity for Apprentice Web Developers to join our team.
@@ -74,28 +79,21 @@
         </table>
       </div>
 
-      <!-- RIGHT COLUMN: Images 
+      <!-- RIGHT COLUMN: Placeholder for Slideshow or Video -->
       <div class="col-md-6 text-center">
-        <!-- Replace "placeholder.jpg" with your own images
-        <img
-          src="placeholder.jpg"
-          alt="Apprenticeship illustration 1"
-          class="img-fluid mb-3"
-        >
-        <img
-          src="placeholder.jpg"
-          alt="Apprenticeship illustration 2"
-          class="img-fluid mb-3"
-        >
+        <!-- Insert your slideshow or video embed here -->
+        <p>This area can be used for a slideshow of images or an embedded video.</p>
       </div>
-    </div>-->
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Cyberland. All Rights Reserved.</p>
   </footer>
 
-  <!-- Custom JavaScript for mobile menu -->
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Mobile menu script -->
   <script src="script.js"></script>
 </body>
 </html>
