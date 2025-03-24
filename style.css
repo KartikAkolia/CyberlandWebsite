@@ -158,3 +158,9 @@ footer {
         margin: 10px auto;
     }
 }
+
+/* Override for training page to reduce top padding */
+.training-page {
+    /* Lowered from 30px to 20px */
+    padding-top: 20px !important;
+}
