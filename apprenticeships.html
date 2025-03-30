@@ -13,9 +13,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Cyberland Theme Park</h1>
-    <button class="menu-toggle">☰</button>
+  <header style="position: relative; background-color: #ff9800; padding: 15px; text-align: center;">
+    <!-- Menu Toggle -->
+    <button class="menu-toggle" style="position: absolute; top: 15px; left: 20px;">☰</button>
+    <!-- Main Title -->
+    <h1 style="margin: 0;">Cyberland Theme Park</h1>
+    <!-- Logo in Top-Right -->
+    <img src="logo.png" alt="Cyberland Logo" class="img-fluid"
+         style="position: absolute; top: 5px; right: 20px; max-width: 150px; height: auto;">
+    <!-- Navigation -->
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -27,35 +33,44 @@
     </nav>
   </header>
 
-  <!-- 
-    Added "apprenticeships-page" class to <main> 
-    and changed my-3 to reduce default Bootstrap margin.
-  -->
   <main class="container my-3 apprenticeships-page">
-    <!-- Centered main heading -->
     <h2 class="text-center">Apprenticeships</h2>
     <div class="row mt-4">
       <!-- LEFT COLUMN: Text & Table -->
       <div class="col-md-6 text-start">
         <h3>Apprentice Web Developers</h3>
-        <p>
-          We have a great opportunity for Apprentice Web Developers to join our team.
-          You need to be self-motivated, driven, and focused on delivering a varied
-          portfolio of digital projects and ongoing retainers.
-        </p>
-        <p>
-          You can opt to start in January 2023 or Summer 2023. Salary for this role is
-          £12,960. The Apprentice Developer role is an entry-level position requiring
-          no previous experience.
-        </p>
-        <p>
-          We will provide full training in all aspects of Web Development through an
-          accredited training provider. You will work on a variety of project-related
-          and support tasks in a small team of experienced developers, learning
-          practical skills alongside your academic studies.
-        </p>
-
-        <!-- Simple Table for Apprenticeship Programme -->
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td>
+                <ul>
+                  <li>Great opportunity for Apprentice Web Developers to join our team.</li>
+                  <li>Must be self-motivated, driven, and focused on delivering a varied portfolio of digital projects and ongoing retainers.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Start Dates: January 2023 or Summer 2023.</li>
+                  <li>Salary: £12,960.</li>
+                  <li>Entry-level position requiring no previous experience.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul>
+                  <li>Full training in all aspects of Web Development through an accredited provider.</li>
+                  <li>Work on various project-related and support tasks in a small team of experienced developers.</li>
+                  <li>Opportunity to learn practical skills alongside academic studies.</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <!-- Apprenticeship Programme Table -->
         <table class="table table-striped">
           <thead>
             <tr>
@@ -69,10 +84,7 @@
               <td>Approx. 12-18 months</td>
             </tr>
             <tr>
-              <td>
-                Level 6 Degree Apprenticeship in either Management Practice
-                or Digital and Technical Solutions
-              </td>
+              <td>Level 6 Degree Apprenticeship in either Management Practice or Digital and Technical Solutions</td>
               <td>Approx. 3-4 years</td>
             </tr>
           </tbody>
