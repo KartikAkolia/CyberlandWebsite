@@ -1,46 +1,52 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Menu Toggle Functionality
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", function () {
-        navLinks.classList.toggle("active");
-    });
-
-    // Dynamic Image Resizing Based on Resolution & Viewport Space
-    const images = document.querySelectorAll(".corner-image");
-
-    images.forEach(img => {
-        // Ensure the image is fully loaded before checking its size
-        img.onload = function () {
-            const naturalWidth = img.naturalWidth;
-            const naturalHeight = img.naturalHeight;
-
-            // Get viewport dimensions
-            const viewportWidth = window.innerWidth;
-            const viewportHeight = window.innerHeight;
-
-            // Set max image dimensions (not exceeding natural size or viewport space)
-            let maxImageWidth = Math.min(naturalWidth, viewportWidth * 0.18); // Max 18% of viewport width
-            let maxImageHeight = Math.min(naturalHeight, viewportHeight * 0.18); // Max 18% of viewport height
-
-            // Apply new dimensions
-            img.style.width = `${maxImageWidth}px`;
-            img.style.height = "auto"; // Maintain aspect ratio
-        };
-
-        // If the image is already loaded (cached), trigger onload manually
-        if (img.complete) {
-            img.onload();
-        }
-    });
-
-    // Resize images dynamically when the window resizes
-    window.addEventListener("resize", function () {
-        images.forEach(img => {
-            if (img.complete) {
-                img.onload();
-            }
-        });
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  initMobileMenu();
+  initDynamicImageResize();
 });
+
+/**
+ * Toggles the mobile nav when the hamburger is clicked.
+ */
+function initMobileMenu() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+}
+
+/**
+ * Dynamically resizes any elements with the 'corner-image' class.
+ */
+function initDynamicImageResize() {
+  const images = document.querySelectorAll(".corner-image");
+
+  const resizeImage = (img) => {
+    if (!img.complete) return;
+    const naturalWidth = img.naturalWidth;
+    const viewportWidth = window.innerWidth;
+    const maxImageWidth = Math.min(naturalWidth, viewportWidth * 0.18); // 18% of viewport width
+    img.style.width = `${maxImageWidth}px`;
+    img.style.height = "auto"; // maintain aspect ratio
+  };
+
+  images.forEach((img) => {
+    // Resize on load
+    img.onload = () => resizeImage(img);
+    // If already loaded (cached), resize immediately
+    if (img.complete) {
+      resizeImage(img);
+    }
+  });
+
+  // Debounce window resize events
+  let resizeTimeout;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      images.forEach((img) => resizeImage(img));
+    }, 100);
+  });
+}

@@ -1,175 +1,159 @@
-/* Cyberland Uniform Theme Styles */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff3e0; /* light cream background */
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff3e0;
+  color: #333;
 }
 
 /* Header */
 header {
-    background-color: #ff9800; /* vibrant orange header */
-    color: white;
-    padding: 15px;
-    text-align: center;
-    position: relative;
+  position: relative;
+  background-color: #ff9800;
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  z-index: 999;
+}
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  max-width: 150px;
+  height: auto;
 }
 
 /* Navigation */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #ff6f00;
+}
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #ff6f00; /* darker orange navigation */
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Main Content */
+/* Main Content & Sections */
 main {
-    padding: 95px 20px 20px;
-    text-align: center;
-    position: relative;
-    min-height: 80vh;
+  padding: 95px 20px 20px;
+  text-align: center;
+  position: relative;
+  min-height: 80vh;
 }
-
-/* Content Sections (About, Vacancies, Training, Apply) */
 .about-section,
 .vacancy-section,
 .training-section,
 .apply-section {
-    background: #ffe0b2;
-    padding: 30px;
-    border-radius: 10px;
-    margin: 80px auto 20px auto;
-    max-width: 60%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: #ffe0b2;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 80px auto 20px;
+  max-width: 60%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
-    background-color: #795548; /* warm brown footer */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    margin-top: 50px;
+  background-color: #795548;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: 50px;
 }
 
-/* Uniform Button Styling */
+/* Buttons & Tables */
 .btn-primary {
-    background-color: #ff6f00;
-    border: none;
+  background-color: #ff6f00;
+  border: none;
 }
-
 .btn-primary:hover {
-    background-color: #e65100;
+  background-color: #e65100;
 }
-
-/* Uniform Table Styling */
 .table {
-    background-color: #fff;
-    color: #333;
+  background: #fff;
+  color: #333;
 }
-
 .table th {
-    background-color: #ff9800;
-    color: white;
+  background-color: #ff9800;
+  color: white;
 }
-
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #ffe0b2;
+  background: #ffe0b2;
 }
 
 /* Form Controls */
 .form-control {
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
 /* Image Placement */
 .corner-image {
-    width: 15vw;
-    max-width: 300px;
-    height: auto;
-    position: absolute;
-    z-index: 1;
+  width: 15vw;
+  max-width: 300px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
 }
-
-.top-left { top: 10px; left: 5%; } 
-.top-right { top: 10px; right: 5%; }
+.top-left   { top: 10px; left: 5%; }
+.top-right  { top: 10px; right: 5%; }
 .bottom-left { bottom: 10px; left: 5%; }
-.bottom-right { bottom: 10px; right: 5%; }
+.bottom-right{ bottom: 10px; right: 5%; }
 
-/* Mobile Styles */
+/* Mobile Styles (768px and below) */
 @media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: #ff6f00;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        padding: 10px 0;
-    }
-
-    .corner-image {
-        width: 100px;
-    }
-    .top-left, .top-right, .bottom-left, .bottom-right {
-        position: static;
-        display: block;
-        margin: 10px auto;
-    }
+  .menu-toggle { display: block; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: transparent;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+  }
+  .nav-links.active { display: flex; align-items: flex-start; }
+  .nav-links li { margin: 0; padding: 0; list-style: none; }
+  .nav-links li a {
+    display: inline-block;
+    background: #ff6f00;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .corner-image { width: 100px; }
+  .top-left, .top-right, .bottom-left, .bottom-right {
+    position: static;
+    display: block;
+    margin: 10px auto;
+  }
 }
 
-/* Override for training page */
-.training-page {
-    padding-top: 20px !important;
-}
-
-/* Override for vacancies page */
-.vacancies-page {
-    padding-top: 20px !important;
-}
-
-/* Override for apprenticeships page */
+/* Page-specific Overrides */
+.training-page,
+.vacancies-page,
 .apprenticeships-page {
-    padding-top: 20px !important;
+  padding-top: 20px !important;
 }
