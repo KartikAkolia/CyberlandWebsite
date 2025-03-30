@@ -1,231 +1,175 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
-/* ---------------------------------------------------------
-   HTML & BODY FOR STICKY FOOTER
---------------------------------------------------------- */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* ---------------------------------------------------------
-   GLOBAL ELEMENT STYLES
---------------------------------------------------------- */
+/* Cyberland Uniform Theme Styles */
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: 'Open Sans', sans-serif;
-  color: var(--color-dark);
-  background: var(--color-light);
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff3e0; /* light cream background */
+    color: #333;
 }
 
-/* ---------------------------------------------------------
-   COLOR VARIABLES
---------------------------------------------------------- */
-:root {
-  --color-primary: #ff9900;
-  --color-secondary: #e55b00;
-  --color-accent: #ff3e00;
-  --color-yellow: #ffc107;
-  --color-brown: #8b4513;
-  --color-dark: #2b2b2b;
-  --color-light: #ffffff;
-  --color-offwhite: #f5f5f5;
-  --fun-bg: #fff3e0;
-  --corporate-bg: #f5f5f5;
+/* Header */
+header {
+    background-color: #ff9800; /* vibrant orange header */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
 }
 
-/* ---------------------------------------------------------
-   NAVBAR STYLING & ENHANCEMENTS
---------------------------------------------------------- */
-.navbar {
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
+/* Navigation */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
-.navbar-brand, 
-.navbar-nav .nav-link {
-  color: var(--color-light) !important;
-  font-weight: 600;
-  font-size: 1.1rem;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #ff6f00; /* darker orange navigation */
 }
 
-.navbar-nav .nav-link:hover {
-  color: #ffcc00;
-  transition: 0.3s;
+nav ul li {
+    margin: 0 15px;
 }
 
-/* Make the logo clickable */
-.top-logo {
-  cursor: pointer;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* ---------------------------------------------------------
-   HEADINGS & TYPOGRAPHY
---------------------------------------------------------- */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--color-secondary);
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: var(--color-secondary);
-}
-
-h3 {
-  font-size: 1.75rem;
-  margin-bottom: 15px;
-  color: var(--color-brown);
-}
-
-.section-heading {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-
-/* ---------------------------------------------------------
-   SECTIONS & CONTAINERS
---------------------------------------------------------- */
-.fun-page, .corporate-page {
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  margin-bottom: 30px;
-}
-
-.fun-page {
-  background-color: var(--fun-bg);
-  border-left: 5px solid var(--color-primary);
-}
-
-.corporate-page {
-  background-color: var(--corporate-bg);
-  border-left: 5px solid var(--color-secondary);
-}
-
-/* ---------------------------------------------------------
-   TABLES
---------------------------------------------------------- */
-.table-bordered > :not(caption) > * > * {
-  border-color: var(--color-dark) !important;
-}
-
-.table thead.table-light {
-  background-color: var(--color-offwhite);
-}
-
-.table tbody tr:hover {
-  background-color: #ffe8cc;
-}
-
-/* ---------------------------------------------------------
-   CALL-TO-ACTION (CTA) & GENERAL BUTTONS
---------------------------------------------------------- */
-button, .btn {
-  background: #ff6600;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-button:hover, .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  background: #ff4500;
-}
-
-/* ---------------------------------------------------------
-   FORM DESIGN
---------------------------------------------------------- */
-input, textarea {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-  width: 100%;
-  margin-top: 5px;
-}
-
-/* Enhance Send Message Button */
-#send-message {
-  background: #ff4500;
-  border-radius: 8px;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#send-message:hover {
-  background: #cc3700;
-}
-
-/* ---------------------------------------------------------
-   FOOTER ENHANCEMENTS & STICKY FOOTER
---------------------------------------------------------- */
-/* main takes the remaining vertical space */
+/* Main Content */
 main {
-  flex: 1 0 auto;
+    padding: 95px 20px 20px;
+    text-align: center;
+    position: relative;
+    min-height: 80vh;
 }
 
+/* Content Sections (About, Vacancies, Training, Apply) */
+.about-section,
+.vacancy-section,
+.training-section,
+.apply-section {
+    background: #ffe0b2;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 80px auto 20px auto;
+    max-width: 60%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
 footer {
-  flex-shrink: 0;
-  background: linear-gradient(to right, #ff6600, #ff9900);
-  color: white;
-  text-align: center;
-  padding: 20px;
+    background-color: #795548; /* warm brown footer */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 50px;
 }
 
-footer a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
+/* Uniform Button Styling */
+.btn-primary {
+    background-color: #ff6f00;
+    border: none;
 }
 
-/* Social Media Icons */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+.btn-primary:hover {
+    background-color: #e65100;
 }
 
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 20px;
+/* Uniform Table Styling */
+.table {
+    background-color: #fff;
+    color: #333;
 }
 
-/* ---------------------------------------------------------
-   FIXED ELEMENTS: LOGO & PARK MAP
---------------------------------------------------------- */
-.park-map {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  max-width: 200px;
-  opacity: 0.9;
-  z-index: 999;
+.table th {
+    background-color: #ff9800;
+    color: white;
 }
 
-/* ---------------------------------------------------------
-   MOBILE-FRIENDLY TABLE STYLING
---------------------------------------------------------- */
-@media (max-width: 768px) {
-  table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #ffe0b2;
+}
+
+/* Form Controls */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Image Placement */
+.corner-image {
+    width: 15vw;
+    max-width: 300px;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+
+.top-left { top: 10px; left: 5%; } 
+.top-right { top: 10px; right: 5%; }
+.bottom-left { bottom: 10px; left: 5%; }
+.bottom-right { bottom: 10px; right: 5%; }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #ff6f00;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .corner-image {
+        width: 100px;
+    }
+    .top-left, .top-right, .bottom-left, .bottom-right {
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* Override for training page */
+.training-page {
+    padding-top: 20px !important;
+}
+
+/* Override for vacancies page */
+.vacancies-page {
+    padding-top: 20px !important;
+}
+
+/* Override for apprenticeships page */
+.apprenticeships-page {
+    padding-top: 20px !important;
 }
