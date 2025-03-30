@@ -1,25 +1,36 @@
+/*
+ * style.css
+ * Custom styles for the Cyberland Theme Park website.
+ *
+ * References:
+ * - CSS fundamentals: https://www.w3schools.com/css/default.asp
+ * - Bootstrap Grid System: https://getbootstrap.com/docs/5.3/layout/grid/
+ */
+
 /* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff3e0;
+  background-color: #fff3e0;  /* Light cream background */
   color: #333;
 }
 
-/* Header */
+/* Header Styling */
 header {
   position: relative;
-  background-color: #ff9800;
+  background-color: #ff9800;  /* Vibrant orange header */
   padding: 15px;
   text-align: center;
-  color: white;
+  color: white;  /* Header text remains white */
 }
+
+/* Hamburger Menu: Hidden on desktop, visible on mobile */
 .menu-toggle {
-  display: none;
+  display: none;  /* Default hidden; shown via media query */
   position: absolute;
   top: 15px;
-  left: 20px;
+  left: 20px;  /* Positioned on left side */
   background: none;
   border: none;
   font-size: 24px;
@@ -27,6 +38,8 @@ header {
   cursor: pointer;
   z-index: 999;
 }
+
+/* Logo positioned at the top-right */
 .logo {
   position: absolute;
   top: 5px;
@@ -35,14 +48,14 @@ header {
   height: auto;
 }
 
-/* Navigation */
+/* Navigation Menu */
 .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
-  background-color: #ff6f00;
+  background-color: #ff6f00;  /* Darker orange for navigation */
 }
 .nav-links li {
   margin: 0 15px;
@@ -53,7 +66,7 @@ header {
   font-weight: bold;
 }
 
-/* Main Content & Sections */
+/* Main Content and Section Styling */
 main {
   padding: 95px 20px 20px;
   text-align: center;
@@ -72,9 +85,9 @@ main {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
-  background-color: #795548;
+  background-color: #795548;  /* Warm brown footer */
   color: white;
   text-align: center;
   padding: 10px;
@@ -82,7 +95,7 @@ footer {
   margin-top: 50px;
 }
 
-/* Buttons & Tables */
+/* Button and Table Styling */
 .btn-primary {
   background-color: #ff6f00;
   border: none;
@@ -102,7 +115,7 @@ footer {
   background: #ffe0b2;
 }
 
-/* Form Controls */
+/* Form Controls Styling */
 .form-control {
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -121,9 +134,10 @@ footer {
 .bottom-left { bottom: 10px; left: 5%; }
 .bottom-right{ bottom: 10px; right: 5%; }
 
-/* Mobile Styles (768px and below) */
+/* Mobile Styles: Applies for screen widths 768px and below */
 @media screen and (max-width: 768px) {
-  .menu-toggle { display: block; }
+  .menu-toggle { display: block; }  /* Show hamburger icon */
+  /* Minimal dropdown navigation below the hamburger */
   .nav-links {
     display: none;
     flex-direction: column;

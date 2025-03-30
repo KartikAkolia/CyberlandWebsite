@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 
+    Meta data and title.
+    - HTML basics: https://www.w3schools.com/html/default.asp
+    - Bootstrap grid and responsive design: https://getbootstrap.com/docs/5.3/layout/grid/
+  -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Apply for a vacancy at Cyberland.">
   <meta name="keywords" content="Apply, Vacancy, Cyberland, Careers">
   <meta name="author" content="Cyberland IT Team">
   <title>Apply Now - Cyberland</title>
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS for responsive layout: https://getbootstrap.com/docs/5.3/getting-started/introduction/ -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
+  <!-- Custom CSS: https://www.w3schools.com/css/default.asp -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header style="position: relative; background-color: #ff9800; padding: 15px; text-align: center;">
-    <!-- Menu Toggle -->
-    <button class="menu-toggle" style="position: absolute; top: 15px; left: 20px;">☰</button>
+  <!-- Header Section -->
+  <header>
+    <!-- 
+      Hamburger Menu Toggle for mobile devices.
+      Refer to: https://www.w3schools.com/js/default.asp for DOM manipulation.
+    -->
+    <button class="menu-toggle">☰</button>
     <!-- Main Title -->
-    <h1 style="margin: 0;">Cyberland Theme Park</h1>
-    <!-- Logo in Top-Right -->
-    <img src="logo.png" alt="Cyberland Logo" class="img-fluid"
-         style="position: absolute; top: 5px; right: 20px; max-width: 150px; height: auto;">
-    <!-- Navigation -->
+    <h1>Cyberland Theme Park</h1>
+    <!-- Logo positioned on the top-right -->
+    <img src="logo.png" alt="Cyberland Logo" class="img-fluid logo">
+    <!-- Navigation Menu using an unordered list -->
     <nav>
       <ul class="nav-links">
+        <!-- Links for navigation; see HTML lists: https://www.w3schools.com/html/html_lists.asp -->
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="apprenticeships.html">Apprenticeships</a></li>
@@ -33,9 +42,16 @@
     </nav>
   </header>
   
+  <!-- Main Content Section: Form for application -->
   <main class="container my-3 training-page">
+    <!-- Heading for the application form -->
     <h2>Apply Now</h2>
+    <!-- 
+      Application Form: Uses Bootstrap classes for spacing and form styling.
+      For form controls, see: https://www.w3schools.com/html/html_forms.asp
+    -->
     <form action="submit_application.php" method="POST" enctype="multipart/form-data">
+      <!-- Vacancy Selection -->
       <div class="mb-3">
         <label for="vacancy" class="form-label">Vacancy</label>
         <select id="vacancy" name="vacancy" class="form-select" required>
@@ -45,35 +61,44 @@
           <option value="it_support_analyst">IT Support Analyst</option>
         </select>
       </div>
+      <!-- Full Name Input -->
       <div class="mb-3">
         <label for="name" class="form-label">Full Name</label>
         <input type="text" id="name" name="name" class="form-control" required>
       </div>
+      <!-- Email Input -->
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
         <input type="email" id="email" name="email" class="form-control" required>
       </div>
+      <!-- Phone Number Input -->
       <div class="mb-3">
         <label for="phone" class="form-label">Phone Number</label>
         <input type="tel" id="phone" name="phone" class="form-control">
       </div>
+      <!-- CV Upload -->
       <div class="mb-3">
         <label for="cv" class="form-label">Upload CV</label>
         <input type="file" id="cv" name="cv" class="form-control" required>
       </div>
+      <!-- Cover Letter Upload -->
       <div class="mb-3">
         <label for="cover-letter" class="form-label">Upload Cover Letter</label>
         <input type="file" id="cover-letter" name="cover_letter" class="form-control" required>
       </div>
+      <!-- Submit Button -->
       <button type="submit" class="btn btn-primary">Submit Application</button>
     </form>
   </main>
   
+  <!-- Footer Section -->
   <footer>
     <p>&copy; 2025 Cyberland. All Rights Reserved.</p>
   </footer>
   
+  <!-- Bootstrap JS for interactive components: https://www.w3schools.com/js/default.asp -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
