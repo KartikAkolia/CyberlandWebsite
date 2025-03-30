@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cyberland Apprenticeships - Opportunities for aspiring Web Developers.">
-  <meta name="keywords" content="Apprenticeships, Web Development, Cyberland, Career Opportunities, Training">
-  <meta name="author" content="Cyberland IT Team">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Cyberland Apprenticeships - Opportunities for aspiring Web Developers." />
+  <meta name="keywords" content="Apprenticeships, Web Development, Cyberland, Career Opportunities, Training" />
+  <meta name="author" content="Cyberland IT Team" />
   <title>Apprenticeships - Cyberland</title>
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS (Uniform Theme) -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header style="position: relative; background-color: #ff9800; padding: 15px; text-align: center;">
-    <!-- Menu Toggle -->
     <button class="menu-toggle" style="position: absolute; top: 15px; left: 20px;">☰</button>
-    <!-- Main Title -->
     <h1 style="margin: 0;">Cyberland Theme Park</h1>
-    <!-- Logo in Top-Right -->
     <img src="logo.png" alt="Cyberland Logo" class="img-fluid"
          style="position: absolute; top: 5px; right: 20px; max-width: 150px; height: auto;">
-    <!-- Navigation -->
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -29,78 +25,66 @@
         <li><a href="apprenticeships.html">Apprenticeships</a></li>
         <li><a href="vacancies.html">Vacancies</a></li>
         <li><a href="apply.html">Apply Now</a></li>
-		<li><a href="training.html">Training Courses</a></li>
+        <li><a href="training.html">Training Courses</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container my-3 apprenticeships-page">
-    <h2 class="text-center">Apprenticeships</h2>
-    <div class="row mt-4">
-      <!-- LEFT COLUMN: Original Paragraph Text & Programme Table -->
-      <div class="col-md-6 text-start">
-        <h3>Apprentice Web Developers</h3>
-        <p>
-          We have a great opportunity for Apprentice Web Developers to join our team.
-          You need to be self-motivated, driven, and focused on delivering a varied
-          portfolio of digital projects and ongoing retainers.
-        </p>
-        <p>
-          You can opt to start in January 2023 or Summer 2023. Salary for this role is
-          £12,960. The Apprentice Developer role is an entry-level position requiring
-          no previous experience.
-        </p>
-        <p>
-          We will provide full training in all aspects of Web Development through an
-          accredited training provider. You will work on a variety of project-related
-          and support tasks in a small team of experienced developers, learning
-          practical skills alongside your academic studies.
-        </p>
-        
-        <!-- Apprenticeship Programme Table -->
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Apprenticeship Programme</th>
-              <th>Duration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Level 3 Software Development Apprenticeship</td>
-              <td>Approx. 12-18 months</td>
-            </tr>
-            <tr>
-              <td>Level 6 Degree Apprenticeship in either Management Practice or Digital and Technical Solutions</td>
-              <td>Approx. 3-4 years</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- RIGHT COLUMN: Responsive Video Embed -->
-      <div class="col-md-6 text-center">
-        <div class="ratio ratio-16x9">
-          <iframe 
-            src="https://www.youtube.com/embed/2bDf13_nhLc" 
-            title="Introduction to Apprenticeships and Traineeships" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-        </div>
+    <h2 class="text-center">Apprentice Web Developers</h2>
+    
+    <!-- Float the video to the right of the first sentence -->
+    <div class="float-md-end" style="width: 50%; margin-left: 1rem; margin-bottom: 1rem;">
+      <div class="ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/2bDf13_nhLc" 
+          title="Introduction to Apprenticeships and Traineeships" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
+    
+    <!-- The first paragraph with the video aligned next to it -->
+    <p>
+      We have a great opportunity for Apprentice Web Developers to join our team. You need to be self-motivated, driven, and focused on delivering a varied portfolio of digital projects and ongoing retainers.
+    </p>
+    <p>
+      You can opt to start in January 2023 or Summer 2023. Salary for this role is £12,960. The Apprentice Developer role is an entry-level position requiring no previous experience.
+    </p>
+    <p>
+      We will provide full training in all aspects of Web Development through an accredited training provider. You will work on a variety of project-related and support tasks in a small team of experienced developers, learning practical skills alongside your academic studies.
+    </p>
+    
+    <!-- Apprenticeship Programme Table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Apprenticeship Programme</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Level 3 Software Development Apprenticeship</td>
+          <td>Approx. 12-18 months</td>
+        </tr>
+        <tr>
+          <td>Level 6 Degree Apprenticeship in either Management Practice or Digital and Technical Solutions</td>
+          <td>Approx. 3-4 years</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
 
   <footer>
     <p>&copy; 2025 Cyberland. All Rights Reserved.</p>
   </footer>
 
-  <!-- Bootstrap JS (optional) -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Mobile menu script -->
+  <!-- Custom JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
